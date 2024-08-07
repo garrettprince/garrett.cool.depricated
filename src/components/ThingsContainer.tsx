@@ -5,15 +5,13 @@ export default function ThingsContainer() {
   return (
     <div className='my-20'>
       <div className='flex justify-between mx-3'>
-          <h1 className='text-3xl'>Things</h1>
+          <h1 className='text-2xl'>Things</h1>
           <p className='text-xl'>more</p>
       </div>
-      <section className='flex'>
-          <ThingCard title="Test" description="Description" video={true} mediaSource="Media" />
 
-          {/* Find out why this doesn't scroll horizontally */}
-          {/* <ThingCard title="Test" description="Description" video={true} mediaSource="Media" />
-          <ThingCard title="Test" description="Description" video={true} mediaSource="Media" /> */}
+      {/* Find out why this doesn't scroll horizontally */}
+      <section className='flex overflow-x-scroll'>
+          <ThingCard title="Test" description="Description" video={false} mediaSource="https://res.cloudinary.com/dvwbpgk6p/image/upload/v1722213801/New%20Garrett.cool/Modern%20Player/losleo_wrza3i.jpg" />
       </section>
     </div>
   );
