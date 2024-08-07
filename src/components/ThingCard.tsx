@@ -4,9 +4,9 @@ import React from 'react'
 
 export default function ThingCard({ title, description, video, mediaSource, textBlack }: { title: string, description: string, video: boolean, mediaSource: string, textBlack: boolean }) {
   return (
-    <div className='my-3 mr-2 p-3 w-fit min-w-[18rem] h-[22rem] relative overflow-hidden rounded-md'>
+    <div className='my-3 mr-3 p-3 w-fit min-w-[16rem] h-[22rem] relative overflow-hidden rounded-md'>
     {video === true ?
-        <video className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" autoPlay loop muted>
+        <video className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" autoPlay playsInline loop muted>
         <source src={mediaSource} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
