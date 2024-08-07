@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function ThingCard({ title, description, video, mediaSource }: { title: string, description: string, video: boolean, mediaSource: string }) {
   return (
-    <div className='m-3 p-3 border w-64 h-80 relative overflow-hidden'>
+    <div className='m-3 p-3 border w-64 h-80 relative overflow-hidden rounded-lg'>
     {video === true ?
         <video className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" autoPlay loop muted>
         <source src={mediaSource} type="video/mp4" />
@@ -14,9 +14,10 @@ export default function ThingCard({ title, description, video, mediaSource }: { 
         <img src={mediaSource} />
     }
 
-      <p>{title}</p>
-      <p>{description}</p>
-      {video === true ? <video src={mediaSource} /> : <img src={mediaSource} />}
+      <div className='flex flex-col justify-end h-full'>
+          <p className='text-2xl'>{title}</p>
+          <p className='text-sm'>{description}</p>
+      </div>
     </div>
   );
 }
